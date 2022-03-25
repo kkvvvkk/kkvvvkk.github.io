@@ -220,11 +220,146 @@ body {
     padding: 0 15px;
 }
 
+/* 아주 중요함 */
 
+.contentWrap {
+    padding: 100px 0;
+}
 
+.contentWrap h2 {
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
 
+.contentWrap h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #dc3545;
+    margin: 20px auto;
+}
 
+.contentWrap p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
 
+.contentWrap .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
 
+.contentWrap .container figure {
+    flex: 1;
+    padding: 0 15px;
+    text-align: center;
+}
 
+.contentWrap .container figure .inner {
+    overflow: hidden;
+    border-radius: 18% 85% 18% 85% / 85% 18% 85% 18% ;
+    margin: 0 0 20px 0;
+}
+/* https://9elements.github.io/fancy-border-radius/ */
 
+.contentWrap .container figure img {
+    transition: 1s;
+}
+
+.contentWrap .container figure:hover img {
+    transform: scale(1.5) rotate(180deg);
+}
+
+.contentWrap .container figure strong {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.contentWrap .container figure a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.eventBanner {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual03.jpg) no-repeat fixed center center/cover;
+    /* background-color background-image background-repeat bacground-position-x background-position-y / background-size */
+    filter: grayscale(0.85);
+}
+
+.eventBanner h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    margin: 0 0 10px 0;
+}
+
+.eventBanner p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin: 0 0 30px 0;
+}
+
+.eventBanner i {
+    padding: 10px;
+    background: #333;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+}
+
+.adMovie {
+    padding: 100px 0;
+}
+
+.adMovie .container {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.adMovie video {
+    width: 100%;
+}
+
+.adMovie .container>* {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.adMovie h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    margin: 0 0 10px 0;
+}
+
+.adMovie p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+
+.adMovie i {
+    font-size: 20px;
+    color: #fff;
+    background: #212529;
+    padding: 10px;
+    margin: 0 5px 0 0;
+    border-radius: 15%;
+}

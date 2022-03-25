@@ -11,7 +11,7 @@ $(function () {
 
     $('.topBanner i ').on('click', topbannerHandler);
 
-
+    // 각각의 슬라이드 애니메이션
 
     $('.mainVisualSlide').on('init reInit afterChange', function () {
         let current = $('.slick-current');
@@ -38,13 +38,12 @@ $(function () {
 
 
 
-
-
-
-
-
-
-
+    $('movieBtn i:first-child').on('click', function () {
+        $('#adMovie').trigger('play');
+    });
+    $('movieBtn i:last-child').on('click', function () {
+        $('#adMovie').trigger('pause');
+    });
 
 
 
