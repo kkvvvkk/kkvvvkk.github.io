@@ -13,19 +13,42 @@ $(function () {
 
     // 각각의 슬라이드 애니메이션
 
-    $('.mainVisualSlide').on('init reInit afterChange', function () {
+    $('.mainVisualSlide').on('init reInit afterChange', function (s,e,c) {
+        console.log(c); //1,2,0
+        $('.mainVisualLink li').eq(c).addClass('on').siblings().removeClass('on')
         let current = $('.slick-current');
         current.addClass('on').siblings().removeClass('on');
+
+        $('.mainVisual .slideNum').text(
+            c ? c +1 : 1
+        )
     });
 
 
     $('.mainVisualSlide').slick({
         autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false,
+        autoplaySpeed: 3000,
+        arrows: false, // 버튼 없앰
         pauseOnHover: false,
         pauseOnFocus: false,
+        //dots: true,
+        //prevArrow: '<i class="xi-arrow-left s_left"></i>',
+        //nextArrow: '<i class="xi-arrow-right s_right"></i>'
     });
+
+
+$('.slideArrows i:first-child').on('click', function() {
+    $('.mainVisualSlide').slick('slickPrev')
+});
+$('.slideArrows i:last-child').on('click', function() {
+    $('.mainVisualSlide').slick('slickNext')
+});
+
+
+$('.mainVisualLink li').on('click', function () {
+    let idx = $(this).index(); // 0 1 2
+    $('.mainVisualSlide').slick('slickGoTo', idx)
+})
 
     //$('.mainVisualSlide figure').eq(1).addClass('on');
     // //전체 슬라이드에서 class를 떄고 지금 스라이드에 class 붙이는 일
@@ -44,10 +67,6 @@ $(function () {
     $('movieBtn i:last-child').on('click', function () {
         $('#adMovie').trigger('pause');
     });
-
-
-
-
 
 
 
