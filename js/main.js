@@ -13,14 +13,15 @@ $(function () {
 
     // 각각의 슬라이드 애니메이션
 
-    $('.mainVisualSlide').on('init reInit afterChange', function (s,e,c) {
-        console.log(c); //1,2,0
+    $('.mainVisualSlide').on('init reInit afterChange', function (e, s, c) {
+        console.log(s.slideCount, c); //1,2,0
         $('.mainVisualLink li').eq(c).addClass('on').siblings().removeClass('on')
         let current = $('.slick-current');
         current.addClass('on').siblings().removeClass('on');
 
+        let num = c ? c + 1 : 1;
         $('.mainVisual .slideNum').text(
-            c ? c +1 : 1
+            "0" + num + "/0" + s.slideCount
         )
     });
 
@@ -61,16 +62,33 @@ $('.mainVisualLink li').on('click', function () {
 
 
 
-    $('movieBtn i:first-child').on('click', function () {
+    $('.movieBtn i:first-child').on('click', function () {
         $('#adMovie').trigger('play');
     });
-    $('movieBtn i:last-child').on('click', function () {
+    $('.movieBtn i:last-child').on('click', function () {
         $('#adMovie').trigger('pause');
     });
 
 
+    $('#bgndVideo').YTPlayer({
+        videoURL:'https://youtu.be/nDuCD1D92HY',
+        containment: '.bgMovie',
+        autoPlay: true,
+        mute: true,
+        startAt: 0,
+        opacity: 1,
+        showControls: false,
+        playOnlyfVisible: false,
+    });
 
 
+    $('.uBtn i:first-child').on('click', function () {
+        $('#bgndVideo').YTPPlay();
+    });
+    
+    $('.uBtn i:last-child').on('click', function () {
+        $('#bgndVideo').YTPPause();
+    });
 
 
 
