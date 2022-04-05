@@ -6,7 +6,6 @@ $(function () {
 
     function topbannerHandler() {
         $('.topBanner').slideUp();
-        곱하기(10, 20);
     }
 
     $('.topBanner i ').on('click', topbannerHandler);
@@ -14,13 +13,13 @@ $(function () {
     // 각각의 슬라이드 애니메이션
 
     $('.mainVisualSlide').on('init reInit afterChange', function (e, s, c) {
-        console.log(s.slideCount, c); //1,2,0
+        //console.log(s.slideCount, c); //1,2,0;
         $('.mainVisualLink li').eq(c).addClass('on').siblings().removeClass('on')
         let current = $('.slick-current');
         current.addClass('on').siblings().removeClass('on');
 
         let num = c ? c + 1 : 1;
-        $('.mainVisual .slideNum').text(
+        $('.mainVisual  .slideNum').text(
             "0" + num + "/0" + s.slideCount
         )
     });
@@ -29,27 +28,26 @@ $(function () {
     $('.mainVisualSlide').slick({
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: false, // 버튼 없앰
+        arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
         //dots: true,
-        //prevArrow: '<i class="xi-arrow-left s_left"></i>',
-        //nextArrow: '<i class="xi-arrow-right s_right"></i>'
+        // prevArrow: '<i class="xi-arrow-left s_left"></i>',
+        // nextArrow: '<i class="xi-arrow-right s_right"></i>'
     });
 
 
-$('.slideArrows i:first-child').on('click', function() {
-    $('.mainVisualSlide').slick('slickPrev')
-});
-$('.slideArrows i:last-child').on('click', function() {
-    $('.mainVisualSlide').slick('slickNext')
-});
+    $('.slideArrows i:first-child').on('click', function () {
+        $('.mainVisualSlide').slick('slickPrev');
+    });
+    $('.slideArrows i:last-child').on('click', function () {
+        $('.mainVisualSlide').slick('slickNext');
+    });
 
-
-$('.mainVisualLink li').on('click', function () {
-    let idx = $(this).index(); // 0 1 2
-    $('.mainVisualSlide').slick('slickGoTo', idx)
-})
+    $('.mainVisualLink li').on('click', function () {
+        let idx = $(this).index(); // 0,1,2
+        $('.mainVisualSlide').slick('slickGoTo', idx);
+    });
 
     //$('.mainVisualSlide figure').eq(1).addClass('on');
     // //전체 슬라이드에서 class를 떄고 지금 스라이드에 class 붙이는 일
@@ -61,7 +59,6 @@ $('.mainVisualLink li').on('click', function () {
     // });
 
 
-
     $('.movieBtn i:first-child').on('click', function () {
         $('#adMovie').trigger('play');
     });
@@ -71,21 +68,20 @@ $('.mainVisualLink li').on('click', function () {
 
 
     $('#bgndVideo').YTPlayer({
-        videoURL:'https://youtu.be/nDuCD1D92HY',
+        videoURL: 'https://youtu.be/eGm6wdU6cn4',
         containment: '.bgMovie',
         autoPlay: true,
         mute: true,
         startAt: 0,
         opacity: 1,
         showControls: false,
-        playOnlyfVisible: false,
+        playOnlyIfVisible: true,
     });
-
 
     $('.uBtn i:first-child').on('click', function () {
         $('#bgndVideo').YTPPlay();
     });
-    
+
     $('.uBtn i:last-child').on('click', function () {
         $('#bgndVideo').YTPPause();
     });
@@ -118,6 +114,7 @@ $('.mainVisualLink li').on('click', function () {
         $(this).addClass('on').siblings().removeClass('on');
         $('.tabContent>div').eq(idx).addClass('on').siblings().removeClass('on');
     });
+
 
 
 

@@ -557,7 +557,7 @@ body {
 .bgMovie {
     padding: 100px 0;
     text-align: center;
-    color: #000;
+    color: #fff;
     background: #000;
     filter: grayscale(0.7);
 }
@@ -580,11 +580,11 @@ body {
 .bgMovie i {
     padding: 15px;
     font-size: 30px;
-    border-radius: 15px;
-    color: #fff;
+    border-radius: 10px;
     background: #333;
-    margin: 0 3px;
+    margin: 0 5px;
 }
+
 
 .customerService {
     padding: 100px 0;
@@ -645,7 +645,7 @@ body {
 .root_daum_roughmap .wrap_map {
     position: relative;
     height: 100% !important;
-/*     border-bottom: 1px solid #333; */
+    border-bottom: 1px solid #ddd;
 }
 
 .productMain {
@@ -678,18 +678,17 @@ body {
 .productMain figure {
     position: relative;
     padding: 50px 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .productMain figure.on strong {
     position: absolute;
     bottom: 100px;
     left: 50%;
-    width: 80%;
+    width: 90%;
     text-align: center;
-    font-size: 14px;
-    padding: 5px;
-    border: 3px solid rgba(0,0,0,0.3);
+    padding: 5px 0;
+    border: 5px solid rgba(0, 0, 0, 0.1);
     transform: translateX(-50%);
     z-index: 999;
 }
@@ -699,22 +698,21 @@ body {
 }
 
 .productMain figure .inner {
-    position: relative;
+    margin-bottom: 20px;
     transition: 0.5s;
 }
 
 .productMain figure.on .inner {
     transform: scale(1.5);
-    z-index: 999;
 }
 
 .productMain .slick-dots li {
     display: inline-block;
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     background: #333;
     border-radius: 50%;
-    margin: 0 3px
+    margin: 0 3px;
 }
 
 .productMain .slick-dots li.slick-active {
@@ -729,7 +727,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     background: #dc3545;
     color: #fff;
@@ -744,6 +742,14 @@ body {
 
 .productMain .slide_arrows i:last-child {
     margin-left: 700px;
+}
+
+.productMain figure .inner {
+    position: relative;
+}
+
+.productMain figure.on .inner {
+    z-index: 999;
 }
 
 .productMain figure .inner::before {
@@ -801,8 +807,8 @@ body {
     height: 0;
     border-left: 40px solid #dc3545;
     border-right: 10px solid transparent;
-    border-bottom: 6px solid #dc3545;
-    border-top: 6px solid #dc3545;
+    border-bottom: 10px solid #dc3545;
+    border-top: 10px solid #dc3545;
     color: #fff;
     font-size: 13px;
 }
