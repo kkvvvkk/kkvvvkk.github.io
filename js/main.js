@@ -116,6 +116,15 @@ $(function () {
     });
 
 
+    $('.customerTap .tabMenu>li').on('click', function () {
+        // console.log($(this), $(this).index())
+        // $(this) 클릭한 자신 $(this).index() 자신의 번호를 구하는 함수
+        let idx = $(this).index(); // 0,1,2
+        $('.customerTap .tabContent>div').eq(idx).addClass('on').siblings().removeClass('on');
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.customerTap .right i').eq(idx).addClass('on').siblings().removeClass('on');
+        
+    })
 
 
     /////////////////////////////////////////////////////

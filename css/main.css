@@ -9,7 +9,6 @@ body {
 
 }
 
-/*  topBanner 2022.03.17 최종수정 JJAMMIN  */
 .topBanner {
     padding: 24px 0;
     background: #f2f2f2;
@@ -52,6 +51,8 @@ body {
     padding: 7px;
     border-radius: 50%; /*100원이 된다.*/
 }
+/* topBanner */
+
 
 
 .headerWrap {
@@ -98,10 +99,7 @@ body {
     background: #212529;
     transform: translateY(-50%);
 }
-
-/* .headerWrap .gnb>ul>li:first-child::before {
-    display: none;
-} */
+/* headerWrap */
 
 
 
@@ -131,8 +129,10 @@ body {
     padding: 10px;
     border-radius: 50%;
 }
+/* searchForm */
 
-/* 메인슬라이드 */
+
+
 .mainVisual {
     position: relative;
 }
@@ -388,9 +388,9 @@ body {
     text-align: center;
     line-height: 200px;
 }
+/* mainVisual */
 
 
-/* 아주 중요함 */
 
 .contentWrap {
     padding: 100px 0;
@@ -459,6 +459,9 @@ body {
     padding: 5px 20px;
     border-radius: 5px;
 }
+/* contentWrap */
+
+
 
 .eventBanner {
     padding: 100px 0;
@@ -489,6 +492,9 @@ body {
     border-radius: 50%;
     margin: 0 0 0 10px;
 }
+/* eventBanner */
+
+
 
 .adMovie {
     padding: 100px 0;
@@ -584,6 +590,8 @@ body {
     background: #333;
     margin: 0 5px;
 }
+/* adMovie & .bgMovie */
+
 
 
 .customerService {
@@ -629,6 +637,9 @@ body {
     padding-bottom: 56.25%;
     background: #dc3545;
 }
+/* customerService */
+
+
 
 .root_daum_roughmap {
     position: absolute !important;
@@ -647,6 +658,9 @@ body {
     height: 100% !important;
     border-bottom: 1px solid #ddd;
 }
+/* root_daum_roughmap */
+
+
 
 .productMain {
     position: relative;
@@ -815,21 +829,171 @@ body {
 
 .productMain .hit span {
     position: absolute;
-    left: -30px;
+    left: -33px;
     top: -10px;
     line-height: 20px;
 }
+/* productMain */
 
 
 
-.tabContent>div {
+.customerTap {
+    padding: 100px 0;
+    background: #f7f7f7;
+}
+
+.customerTap .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.customerTap .container>div {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.customerTap .tabMenu {
+    display: flex;
+}
+
+.customerTap .tabMenu>li {
+    flex: 1;
+    line-height: 50px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+.customerTap .tabMenu>li~li {
+    border-left: 1px solid #fff;
+}
+
+.customerTap .tabMenu>li a {
+    display: block;
+    padding: 0 20px;
+}
+
+.customerTap .tabMenu>li.on {
+    background: #91c0c7;
+    color: #fff;
+}
+
+
+.customerTap .tabContent ul li {
+    line-height: 40px;
+    border-bottom: 1px solid#ddd;
+}
+
+.customerTap .tabContent ul li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.customerTap .tabContent ul span {
+    float: right;
+    color: #999;
+}
+
+.customerTap .tabContent ul a {
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.customerTap .tabContent>div {
     display: none;
 }
 
-.tabContent>div.on {
+.customerTap .tabContent>div.on {
     display: block;
 }
 
-.tabMenu li.on {
-    color: #f00;
+.customerTap .right {
+    position: relative;
+}
+
+.customerTap .right i {
+    position: absolute;
+    inset: 0 auto auto 0;
+    display: none;
+    color: #91c0c7;
+    font-size: 100px;    
+}
+
+.customerTap .right i.on {
+    display: block;
+    animation: heart_move 1s infinite;
+}
+
+.customerTap .right i:nth-child(1) {
+    inset: 150px auto auto 40px;
+}
+
+.customerTap .right i:nth-child(2) {
+    inset: 90px auto auto 260px;
+}
+
+.customerTap .right i:nth-child(3) {
+    inset: 20px auto auto 470px;
+}
+
+@keyframes heart_move {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+/* customerTap */
+
+
+
+.footerWrap {
+    background: #333;
+    color: #ddd;
+    font-weight: lighter;
+}
+
+.footerWrap .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+.footerWrap .container>* {
+    padding: 0 15px;
+}
+
+.footerWrap .top {
+    border-bottom: 1px solid #666;
+}
+
+.footerWrap .top ul {
+    display: flex;
+}
+
+.footerWrap .top ul li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+    margin: 0 10px;
+}
+
+.footerWrap address {
+    font-style: normal;
 }
