@@ -11,7 +11,7 @@ body {
 
 .topBanner {
     padding: 24px 0;
-    background: #f2f2f2;
+    background: #ddeefb;
 }
 
 .topBanner .container {
@@ -22,34 +22,31 @@ body {
 }
 
 .topBanner h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 25px;
     font-weight: 100;
     letter-spacing: 0.040em;
+    text-align:center;
+    color: #448cc3;
 }
 
 .topBanner p {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: -0.025em;
-}
-
-.topBanner a {
-    padding: 3px 30px;
-    border: 1px solid #333;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 30px;
+    text-align:center;
+    color: #666;
 }
 
 .topBanner i {
     position: absolute;
     top: 0;
     right: 15px;
-    font-size: 20px;
-    background: #ddd;
+    font-size: 10px;
+    background: #448cc3;
+    color:#fff;
     padding: 7px;
-    border-radius: 50%; /*100원이 된다.*/
+    border-radius: 20%; /*100원이 된다.*/
 }
 /* topBanner */
 
@@ -58,6 +55,7 @@ body {
 .headerWrap {
 
 }
+
 
 .headerWrap .container {
     display: flex;
@@ -104,10 +102,11 @@ body {
 
 
 #searchForm input[type="text"]{
-    color: #fd7e14;
     outline: none;
     border: none;
-    border-bottom: 1px solid #333;
+    font-size: 15px;
+    border-bottom: 1px solid #222;
+    color: #448cc3;
     padding: 3px 5px;
 }
 #searchForm input:placeholder {
@@ -140,12 +139,12 @@ body {
     position: relative;
     height: 600px;
     color: #fff;
-    text-shadow: 0 0 3px #333;
+    text-shadow: 0 0 10px #333;
 }
 
 .mainVisual .mainVisualSlide figure.itm02 {
     color: #333;
-    text-shadow: 0 0 3px #fff;
+    text-shadow: 0 0 10px #fff;
 }
 
 
@@ -166,9 +165,9 @@ body {
 }
 
 .mainVisual .mainVisualSlide figure p {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     opacity: 0;
     transform: translateY(100px);
 }
@@ -176,7 +175,7 @@ body {
 .mainVisual .mainVisualSlide figure.on p {
     opacity: 1;
     transform: translateY(0);
-    transition: 0.5s 0.5s;
+    transition: 1s;
 }
 
 .mainVisual .mainVisualSlide figure a {
@@ -203,13 +202,13 @@ body {
 
 
 .mainVisual .mainVisualSlide .itm01{
-    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+    background: url(../img/필기구.jpg) no-repeat center center/cover;
 }
 .mainVisual .mainVisualSlide .itm02{
-    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+    background: url(../img/캘리.jpg) no-repeat center center/cover;
 }
 .mainVisual .mainVisualSlide .itm03{
-    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+    background: url(../img/선물.jpg) no-repeat center center/cover;
 }
 
 .mainVisual .mainVisualSlide .slogan {
@@ -278,7 +277,8 @@ body {
 
     padding: 20px;
     font-size: 50px;
-    background: rgba(0,0,0,0.5);
+    background: #448cc3;
+    opacity: 0.7;
     color: #fff;
     border-radius: 50%;
 }
@@ -353,7 +353,7 @@ body {
     
     width: 0;
     height: 100%;
-    background: #91c0c7;
+    background: #448cc3;
 }
 
 .mainVisual .mainVisualLink li.on::before {
@@ -375,31 +375,18 @@ body {
     border-radius: 50%;
 }
 
-.mainVisual .slideNum {
-    position: absolute;
-    top: 100px;
-    right: 200px;
-
-    width: 200px;
-    height: 200px;
-    background: #dc3545;
-    color: #fff;
-    font-size: 50px;
-    text-align: center;
-    line-height: 200px;
-}
 /* mainVisual */
 
 
 
 .contentWrap {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 .contentWrap h2 {
     font-size: 20px;
     font-weight: 100;
-    letter-spacing: 0.5em;
+
     text-align: center;
 }
 
@@ -408,7 +395,7 @@ body {
     display: block;
     width: 40px;
     height: 2px;
-    background: #dc3545;
+    background: #448cc3;
     margin: 20px auto;
 }
 
@@ -467,20 +454,22 @@ body {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/mainvisual03.jpg) no-repeat fixed center center/cover;
+    background: url(../img/이주연도장판.jpg) no-repeat fixed center center/cover;
     /* background-color background-image background-repeat bacground-position-x background-position-y / background-size */
-    filter: grayscale(0.85);
+    filter: grayscale(0.5);
 }
 
 .eventBanner h2 {
-    font-size: 19px;
+    font-size: 30px;
+    text-shadow: 0 0 20px #222;
     font-weight: 100;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
     margin: 0 0 10px 0;
 }
 
 .eventBanner p {
-    font-size: 15px;
+    font-size: 20px;
+    text-shadow: 0 0 20px #222;
     font-weight: 300;
     letter-spacing: -0.025em;
     margin: 0 0 30px 0;
@@ -519,7 +508,7 @@ body {
 .adMovie h2 {
     font-size: 19px;
     font-weight: 100;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
     margin: 0 0 10px 0;
 }
 
@@ -593,78 +582,9 @@ body {
 /* adMovie & .bgMovie */
 
 
-
-.customerService {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.customerService h2 {
-    font-size: 19px;
-    font-weight: 100;
-    letter-spacing: 0.5em;
-    margin: 0 0 10px 0;
-}
-
-.customerService p {
-    font-size: 15px;
-    font-weight: 300;
-    letter-spacing: -0.025em;
-    margin: 0 0 30px 0;
-}
-
-.customerService .container {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.customerService .container>div {
-    flex: 1;
-    padding: 0 15px;
-}
-
-.customerService .container>div iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.customerService .container>div .inner {
-    position: relative;
-    padding-bottom: 56.25%;
-    background: #dc3545;
-}
-/* customerService */
-
-
-
-.root_daum_roughmap {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.root_daum_roughmap .wrap_controllers {
-    display: none;
-}
-
-.root_daum_roughmap .wrap_map {
-    position: relative;
-    height: 100% !important;
-    border-bottom: 1px solid #ddd;
-}
-/* root_daum_roughmap */
-
-
-
 .productMain {
     position: relative;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
     border-top: 1px solid #ddd;
 }
@@ -672,7 +592,7 @@ body {
 .productMain h2 {
     font-size: 19px;
     font-weight: 100;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
     margin: 0 0 10px 0;
 }
 
@@ -684,7 +604,7 @@ body {
 }
 
 .productMain .container {
-    width: 1200px;
+    width: 1300px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -702,9 +622,11 @@ body {
     width: 90%;
     text-align: center;
     padding: 5px 0;
-    border: 5px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid #fff;
     transform: translateX(-50%);
     z-index: 999;
+    color: #fff;
+    text-shadow: 0 0 30px #333;
 }
 
 .productMain .slick-dots {
@@ -730,7 +652,7 @@ body {
 }
 
 .productMain .slick-dots li.slick-active {
-    background: #dc3545;
+    background: #448cc3;
 }
 
 .productMain .slick-dots li button {
@@ -743,7 +665,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background: #dc3545;
+    background: #448cc3;
     color: #fff;
     padding: 20px;
     font-size: 30px;
@@ -772,8 +694,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    border-top: 2px solid #dc3545;
-    border-left: 2px solid #dc3545;
+    border-top: 2px solid #448cc3;
+    border-left: 2px solid #448cc3;
 
     width: 0;
     height: 0;
@@ -795,8 +717,8 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    border-bottom: 2px solid #dc3545;
-    border-right: 2px solid #dc3545;
+    border-bottom: 2px solid #448cc3;
+    border-right: 2px solid #448cc3;
 
     width: 0;
     height: 0;
@@ -875,7 +797,7 @@ body {
 }
 
 .customerTap .tabMenu>li.on {
-    background: #91c0c7;
+    background: #448cc3;
     color: #fff;
 }
 
@@ -920,7 +842,7 @@ body {
     position: absolute;
     inset: 0 auto auto 0;
     display: none;
-    color: #91c0c7;
+    color: #448cc3;
     font-size: 100px;    
 }
 
@@ -974,7 +896,7 @@ body {
 }
 
 .footerWrap .container>* {
-    padding: 0 15px;
+    padding: 0 30px;
 }
 
 .footerWrap .top {
